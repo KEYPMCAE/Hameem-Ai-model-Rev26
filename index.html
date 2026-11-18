@@ -179,8 +179,8 @@
 
   <div id="infoBody"></div>
 
-  <h2>حدود الدفان لزاوية ميل الرامب <bdi dir="ltr">18°</bdi></h2><div class="backfillAngleRow" role="group" aria-label="حدود الدفان 18 درجة"><button type="button" id="boundaryToggle2" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#a6ed32"><span class="boundarySwatch"></span><span>حدود <bdi>600</bdi></span></button><button type="button" id="boundaryToggle1" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#ff49b0"><span class="boundarySwatch"></span><span>حدود <bdi>700</bdi></span></button><button type="button" id="boundaryToggle0" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#00cfff"><span class="boundarySwatch"></span><span>حدود <bdi>1000</bdi></span></button></div>
-<h2>حدود الدفان لزاوية ميل الرامب <bdi dir="ltr">23°</bdi></h2><div class="backfillAngleRow" role="group" aria-label="حدود الدفان 23 درجة"><button type="button" id="boundaryToggle3" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#ff922e"><span class="boundarySwatch"></span><span>حدود <bdi>600</bdi></span></button><button type="button" id="boundaryToggle4" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#a78bfa"><span class="boundarySwatch"></span><span>حدود <bdi>700</bdi></span></button><button type="button" id="boundaryToggle5" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#ffed45"><span class="boundarySwatch"></span><span>حدود <bdi>1000</bdi></span></button></div>
+  <h2>حدود الدفان لزاوية ميل الرامب <bdi dir="ltr">18°</bdi></h2><div class="backfillAngleRow" role="group" aria-label="حدود الدفان 18 درجة"><button type="button" id="boundaryToggle2" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#5a321b"><span class="boundarySwatch"></span><span>حدود <bdi>600</bdi></span></button><button type="button" id="boundaryToggle1" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#5a321b"><span class="boundarySwatch"></span><span>حدود <bdi>700</bdi></span></button><button type="button" id="boundaryToggle0" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#5a321b"><span class="boundarySwatch"></span><span>حدود <bdi>1000</bdi></span></button></div>
+<h2>حدود الدفان لزاوية ميل الرامب <bdi dir="ltr">23°</bdi></h2><div class="backfillAngleRow" role="group" aria-label="حدود الدفان 23 درجة"><button type="button" id="boundaryToggle3" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#5a321b"><span class="boundarySwatch"></span><span>حدود <bdi>600</bdi></span></button><button type="button" id="boundaryToggle4" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#5a321b"><span class="boundarySwatch"></span><span>حدود <bdi>700</bdi></span></button><button type="button" id="boundaryToggle5" class="boundaryToggle" aria-pressed="false" style="--boundary-color:#5a321b"><span class="boundarySwatch"></span><span>حدود <bdi>1000</bdi></span></button></div>
 <details id="operationsPanel" style="margin-top:10px"><summary style="cursor:pointer">توزيع التشغيل</summary>
 <label class="chkRow"><input id="chkOperations" type="checkbox"> إظهار الخطوط كاد</label>
 <label class="chkRow"><input id="chkConveyorRealism" type="checkbox" checked> إظهار الخطوط بواقعية</label>
@@ -2129,6 +2129,7 @@ function backfillMaterial(color,width){
   }`
  });
 }
+for(const boundary of backfillConfig)boundary.color='#5a321b';
 function initBackfillBoundaries(){
  backfillConfig.forEach((boundary,i)=>{
   const group=new THREE.Group();group.name=boundary.name;group.userData.kind='backfill-boundary';scene.add(group);
